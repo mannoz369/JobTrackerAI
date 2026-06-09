@@ -4,6 +4,7 @@
 .env
 .env.*
 !.env.example
+!**/.env.example
 
 # Python
 __pycache__/
@@ -23,4 +24,3 @@ coverage/
 
 # Logs
 *.log
-

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 24% 98%;
+    --foreground: 217 33% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 217 33% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 33% 13%;
+    --primary: 174 76% 26%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 218 17% 92%;
+    --secondary-foreground: 217 33% 13%;
+    --muted: 210 22% 94%;
+    --muted-foreground: 217 14% 42%;
+    --accent: 42 95% 58%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 74% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 18% 86%;
+    --input: 214 18% 86%;
+    --ring: 174 76% 26%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: Aptos, "SF Pro Text", "Segoe UI", sans-serif;
+    font-feature-settings:
+      "ss01" 1,
+      "cv01" 1;
+  }
+}
+
+@layer utilities {
+  .shell-grid {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.65) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
